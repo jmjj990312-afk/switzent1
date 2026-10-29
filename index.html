@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
 <title>향남역 그로브 스위첸 | 대표전화 1644-7392</title>
 <meta name="description" content="향남역 그로브 스위첸 지하2층~지상29층 7개동 총 933세대, 전용 71·84·107·147㎡. 견본주택 방문예약 및 상담 1644-7392">
 <meta property="og:type" content="website">
@@ -87,13 +87,13 @@ h2{font-family:var(--serif);letter-spacing:-.01em;font-size:clamp(23px,5.4vw,36p
 .pt h3{margin:4px 0 6px;font-size:18px}
 .pt p{margin:0;color:var(--muted);font-size:15px}
 .dark .pt p{color:#c3cad8}
-.pt img{margin:-20px -20px 14px;width:calc(100% + 40px);max-width:none;aspect-ratio:3/2;object-fit:cover;cursor:zoom-in}
+.pt img{margin:-20px -20px 14px;width:calc(100% + 40px);max-width:none;aspect-ratio:3/2;object-fit:cover}
 
 .cut{border:1px solid var(--line);background:#fff}
 .cut .seg{position:relative;overflow:hidden;max-width:100%}
 .cut .seg img{width:100%;max-width:none;display:block}
 .cut span{position:absolute;background:#fff;display:block}
-.full{width:100%;cursor:zoom-in;border:1px solid var(--line);background:#fff}
+.full{width:100%;border:1px solid var(--line);background:#fff}
 .mt{margin-top:22px}
 .note{font-size:12px;color:#8a9391;margin-top:10px}
 .dark .note{color:#98a2b6}
@@ -176,10 +176,6 @@ footer .op b{color:var(--gold2)}
 .pop .in{background:#fff;max-width:360px;width:100%;padding:28px 22px;text-align:center;border-top:4px solid var(--gold)}
 .pop .in h3{font-family:var(--serif);color:var(--green);margin:0 0 8px;font-size:22px}
 .pop .in button{margin-top:16px;width:100%;padding:13px;border:0;background:var(--green);color:#fff;font:inherit;font-weight:700;cursor:pointer}
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:95;display:none;overflow:auto;padding:50px 10px 20px}
-.lb.on{display:block}
-.lb img{margin:0 auto;max-width:min(1100px,100%)}
-.lb button{position:fixed;top:10px;right:12px;background:var(--gold);color:#fff;border:0;width:42px;height:42px;font-size:22px;cursor:pointer}
 
 
 /* 대표문의 배너 */
@@ -478,7 +474,6 @@ footer .op b{color:var(--gold2)}
   </div>
 </div>
 
-<div class="lb" id="lb"><button type="button" aria-label="닫기" id="lbX">✕</button><img id="lbImg" alt=""></div>
 
 <script>
 var SITE='향남역 그로브 스위첸';
@@ -542,15 +537,7 @@ document.querySelectorAll('.tabs button').forEach(function(b){
   });
 });
 
-/* 사진 크게 보기 */
-var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
-document.addEventListener('click',function(e){
-  var t=e.target;
-  if(t.classList&&t.classList.contains('zoom')){lbImg.src=t.currentSrc||t.src;lbImg.alt=t.alt;lb.classList.add('on');lb.scrollTop=0;}
-});
-document.getElementById('lbX').addEventListener('click',function(){lb.classList.remove('on');});
-lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on');});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('on');document.getElementById('done').classList.remove('on');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('done').classList.remove('on');}});
 </script>
 </body>
 </html>
