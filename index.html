@@ -7,8 +7,11 @@
 <meta name="description" content="향남역 그로브 스위첸 지하2층~지상29층 7개동 총 933세대, 전용 71·84·107·147㎡. 견본주택 방문예약 및 상담 1644-7392">
 <meta property="og:type" content="website">
 <meta property="og:title" content="향남역 그로브 스위첸 | 대표전화 1644-7392">
-<meta property="og:description" content="7개동 총 933세대 · 도보학군 · 풍경공원 직접연결 · 견본주택 방문예약 접수 중">
-<meta property="og:image" content="https://xn--q20b245acmc65au2puno.com/img/main.jpg">
+<meta property="og:description" content="계약금 5% · 중도금 무이자 · 전매 6개월 · 견본주택 방문예약 접수 중">
+<meta property="og:image" content="https://jmjj990312-afk.github.io/switzent1/img/hero.jpg">
+<meta property="og:image:width" content="1079">
+<meta property="og:image:height" content="1275">
+<meta property="og:url" content="https://jmjj990312-afk.github.io/switzent1/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
 <style>
@@ -37,7 +40,7 @@ nav a:hover{color:var(--gold2)}
 
 /* 히어로 */
 .hero{position:relative;color:#fff;background:var(--green)}
-.hero picture img{width:100%;height:auto}
+.hero img{width:100%;max-width:760px;height:auto;margin:0 auto}
 .hero .over{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(8,17,36,.93) 45%);padding:70px 0 26px}
 .hero h1{font-family:var(--serif);font-size:clamp(26px,6.5vw,52px);margin:0 0 6px;line-height:1.25}
 .hero p.k{margin:0 0 16px;color:var(--gold2);font-size:clamp(14px,3.6vw,18px)}
@@ -174,6 +177,23 @@ footer .op b{color:var(--gold2)}
 .lb img{margin:0 auto;max-width:min(1100px,100%)}
 .lb button{position:fixed;top:10px;right:12px;background:var(--gold);color:#fff;border:0;width:42px;height:42px;font-size:22px;cursor:pointer}
 
+
+/* 대표문의 배너 */
+.bn{display:block;background:#0d2240;color:#fff;margin:0;text-decoration:none}
+.bn .in{max-width:1100px;margin:0 auto;padding:18px max(16px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px 22px;align-items:center}
+.bn .l small{display:block;font-size:13px;color:#cfd7e6;margin-bottom:4px;letter-spacing:.02em}
+.bn .l small b{color:#fff;font-weight:700}
+.bn .l em{display:block;font-style:normal;font-weight:800;font-size:clamp(15px,3.6vw,20px);letter-spacing:.3em}
+.bn .l strong{display:block;font-size:clamp(38px,9.5vw,68px);line-height:1;font-weight:800;background:linear-gradient(180deg,#ff8a5b,#ff4b2b);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.01em;animation:pulse 1.6s infinite;transform-origin:left center}
+.bn .r{display:flex;flex-direction:column;gap:10px;min-width:0}
+.bn .hl{display:flex;align-items:center;gap:12px}
+.bn .hl svg{flex:none;width:clamp(40px,8vw,58px);height:auto}
+.bn .hl p{margin:0;font-weight:800;font-size:clamp(15px,3.6vw,23px);line-height:1.3;color:#e9f77a}
+.bn .hl p i{font-style:normal;color:#ff4b5c}
+.bn .pill{align-self:stretch;background:#fff;color:#0d2240;border-radius:40px;text-align:center;font-weight:800;font-size:clamp(17px,4.2vw,26px);padding:10px 16px;animation:blink 1.3s infinite}
+.bn .pill b{color:#c8102e}
+@media (max-width:640px){.bn .in{grid-template-columns:minmax(0,1fr)}.bn .l{text-align:center}.bn .l strong{transform-origin:center}}
+
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.45}}
 @keyframes shine{0%{background-position:0 0}100%{background-position:200% 0}}
@@ -198,28 +218,12 @@ footer .op b{color:var(--gold2)}
     <a class="hcall" href="tel:16447392">☎ 1644-7392</a>
   </div>
   <nav class="wrap">
-    <a href="#overview">사업개요</a><a href="#schedule">분양일정</a><a href="#location">입지환경</a><a href="#design">단지설계</a><a href="#premium">프리미엄</a><a href="#landscape">조경</a><a href="#community">커뮤니티</a><a href="#unit">평면</a><a href="#map">오시는 길</a><a href="#reserve2">방문예약</a>
+    <a href="#overview">사업개요</a><a href="#schedule">분양일정</a><a href="#location">입지환경</a><a href="#design">단지설계</a><a href="#landscape">조경</a><a href="#community">커뮤니티</a><a href="#unit">평면</a><a href="#map">오시는 길</a><a href="#reserve2">방문예약</a>
   </nav>
 </header>
 
 <div class="hero" id="top">
-  <picture>
-    <source media="(max-width:640px)" srcset="https://xn--q20b245acmc65au2puno.com/img/main_m.jpg">
-    <img src="https://xn--q20b245acmc65au2puno.com/img/main.jpg" alt="향남역 그로브 스위첸 메인 이미지" class="zoom">
-  </picture>
-  <div class="over">
-    <div class="wrap">
-      <span class="badge">견본주택 방문예약 접수 중</span>
-      <h1>향남의 새로운 주거중심,<br>그로브 스위첸</h1>
-      <p class="k">아이의 내일이 가까운 곳 · 도보학군 · 풍경공원 직접연결</p>
-      <div class="stats">
-        <div><b>933</b><span>총 세대수</span></div>
-        <div><b>7개동</b><span>지하2층~지상29층</span></div>
-        <div><b>약 500m</b><span>화원초·하길중·고</span></div>
-        <div><b>5.65km</b><span>단지·공원 산책코스</span></div>
-      </div>
-    </div>
-  </div>
+  <img src="img/hero.jpg" alt="향남역 스위첸 계약금 5% 중도금 무이자 전매 6개월 대표전화 1644-7392" class="zoom" width="1079" height="1275">
 </div>
 
 <div class="band" aria-hidden="true"><div class="tk">
@@ -248,6 +252,16 @@ footer .op b{color:var(--gold2)}
   </div>
 </section>
 
+<a class="bn" href="tel:16447392" aria-label="대표문의 1644-7392 전화걸기">
+  <div class="in">
+    <div class="l"><small><b>SWITZEN</b> 향남역 그로브 스위첸</small><em>대/표/문/의</em><strong>1644-7392</strong></div>
+    <div class="r">
+      <div class="hl"><svg viewBox="0 0 48 52" aria-hidden="true"><rect x="7" y="3" width="34" height="34" rx="7" fill="none" stroke="#fff" stroke-width="4"/><rect x="13" y="10" width="22" height="11" rx="2" fill="#fff"/><circle cx="16" cy="29" r="2.6" fill="#fff"/><circle cx="32" cy="29" r="2.6" fill="#fff"/><path d="M14 40 L8 50 M34 40 L40 50" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+        <p>계약금 5% · 중도금 무이자<i>!!</i><br>향남역 GTX-C · 전매 6개월</p></div>
+      <div class="pill">방문예약 <b>접수중!</b></div>
+    </div>
+  </div>
+</a>
 <section id="overview">
   <div class="wrap">
     <div class="eb">SUMMARY</div>
@@ -288,7 +302,32 @@ footer .op b{color:var(--gold2)}
   </div>
 </section>
 
-<section id="location">
+<a class="bn" href="tel:16447392" aria-label="대표문의 1644-7392 전화걸기">
+  <div class="in">
+    <div class="l"><small><b>SWITZEN</b> 향남역 그로브 스위첸</small><em>대/표/문/의</em><strong>1644-7392</strong></div>
+    <div class="r">
+      <div class="hl"><svg viewBox="0 0 48 52" aria-hidden="true"><rect x="7" y="3" width="34" height="34" rx="7" fill="none" stroke="#fff" stroke-width="4"/><rect x="13" y="10" width="22" height="11" rx="2" fill="#fff"/><circle cx="16" cy="29" r="2.6" fill="#fff"/><circle cx="32" cy="29" r="2.6" fill="#fff"/><path d="M14 40 L8 50 M34 40 L40 50" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+        <p>계약금 5% · 중도금 무이자<i>!!</i><br>향남역 GTX-C · 전매 6개월</p></div>
+      <div class="pill">방문예약 <b>접수중!</b></div>
+    </div>
+  </div>
+</a>
+<section id="design">
+  <div class="wrap">
+    <div class="eb">BRILLIANT ARCHITECTURE</div>
+    <h2>트렌디한 단지 설계로<br>품격 높은 랜드마크를 선보이다</h2>
+    <p class="lead">차별화된 외관 디자인과 특화 평면, 혁신적인 설계로 스위첸 랜드마크를 완성합니다.</p>
+    <div class="pts">
+      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img01.jpg" alt="시그니처 외관 디자인"><h3>시그니처 외관 디자인</h3><p>굿디자인 어워드(GD) 선정 '스위첸 디자인 매뉴얼 2.0'을 적용한 차별화된 외관</p></div>
+      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img02.jpg" alt="오픈발코니 특화설계"><h3>오픈발코니 특화설계</h3><p>유리난간대를 적용해 조망까지 누리며 취향대로 활용하는 특화 발코니(일부세대)</p></div>
+      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img03.jpg" alt="세대 내 조망형 창호"><h3>세대 내 조망형 창호</h3><p>유리난간대를 설치한 와이드 뷰 창호로 거실·침실에서 파노라마 조망</p></div>
+      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img04.jpg" alt="KCC 글로벌 마감재"><h3>KCC의 글로벌 마감재</h3><p>KCC의 첨단 기술로 만든 우수한 품질과 트렌디한 디자인의 고품격 마감재</p></div>
+    </div>
+    <img class="full mt zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/sub/complex.jpg" alt="단지 설계 안내">
+  </div>
+</section>
+
+<section id="location" class="alt">
   <div class="wrap">
     <div class="eb">LOCATION</div>
     <h2>교육, 생활, 직주근접까지<br>독보적인 향남 라이프</h2>
@@ -304,41 +343,25 @@ footer .op b{color:var(--gold2)}
   </div>
 </section>
 
-<section id="design" class="alt">
-  <div class="wrap">
-    <div class="eb">BRILLIANT ARCHITECTURE</div>
-    <h2>트렌디한 단지 설계로<br>품격 높은 랜드마크를 선보이다</h2>
-    <p class="lead">차별화된 외관 디자인과 특화 평면, 혁신적인 설계로 스위첸 랜드마크를 완성합니다.</p>
-    <div class="pts">
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img01.jpg" alt="시그니처 외관 디자인"><h3>시그니처 외관 디자인</h3><p>굿디자인 어워드(GD) 선정 '스위첸 디자인 매뉴얼 2.0'을 적용한 차별화된 외관</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img02.jpg" alt="오픈발코니 특화설계"><h3>오픈발코니 특화설계</h3><p>유리난간대를 적용해 조망까지 누리며 취향대로 활용하는 특화 발코니(일부세대)</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img03.jpg" alt="세대 내 조망형 창호"><h3>세대 내 조망형 창호</h3><p>유리난간대를 설치한 와이드 뷰 창호로 거실·침실에서 파노라마 조망</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/value_img04.jpg" alt="KCC 글로벌 마감재"><h3>KCC의 글로벌 마감재</h3><p>KCC의 첨단 기술로 만든 우수한 품질과 트렌디한 디자인의 고품격 마감재</p></div>
+<a class="bn" href="tel:16447392" aria-label="대표문의 1644-7392 전화걸기">
+  <div class="in">
+    <div class="l"><small><b>SWITZEN</b> 향남역 그로브 스위첸</small><em>대/표/문/의</em><strong>1644-7392</strong></div>
+    <div class="r">
+      <div class="hl"><svg viewBox="0 0 48 52" aria-hidden="true"><rect x="7" y="3" width="34" height="34" rx="7" fill="none" stroke="#fff" stroke-width="4"/><rect x="13" y="10" width="22" height="11" rx="2" fill="#fff"/><circle cx="16" cy="29" r="2.6" fill="#fff"/><circle cx="32" cy="29" r="2.6" fill="#fff"/><path d="M14 40 L8 50 M34 40 L40 50" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+        <p>계약금 5% · 중도금 무이자<i>!!</i><br>향남역 GTX-C · 전매 6개월</p></div>
+      <div class="pill">방문예약 <b>접수중!</b></div>
     </div>
-    <img class="full mt zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/sub/complex.jpg" alt="단지 설계 안내">
   </div>
-</section>
-
-<section id="premium">
-  <div class="wrap">
-    <div class="eb">PREMIUM</div>
-    <h2>향남역 그로브 스위첸 프리미엄</h2>
-    <p class="lead">브랜드, 교육, 자연, 직주근접까지 한 번에 누리는 단지입니다.</p>
-    <img class="full zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/sub/premium.jpg" alt="프리미엄 안내">
-    <div class="cta"><a class="btn call" href="tel:16447392">☎ 1644-7392 전화상담</a><a class="btn rsv" href="#reserve2">방문예약 남기기</a></div>
-  </div>
-</section>
-
+</a>
 <section id="landscape" class="alt">
   <div class="wrap">
     <div class="eb">LANDSCAPE</div>
     <h2>단지와 공원이 이어진<br>대자연의 경관</h2>
     <p class="lead">단지 내 조경과 풍경공원, 문화공원, 어린이공원이 연결되는 약 5.65km 산책코스</p>
     <div class="pts">
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/land_img01.jpg" alt="프리미엄 게이트"><h3>PREMIUM GATE</h3><p>단지의 세련된 첫인상을 선사하는 품격 높은 문주</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/land_img02.jpg" alt="시그니처 헤이븐 스퀘어"><h3>SIGNATURE HAVEN SQUARE</h3><p>감각적인 조경과 수경이 어우러진 힐링스퀘어</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/land_img03.jpg" alt="펫 파크"><h3>PAW &amp; BREEZE GARDEN</h3><p>반려동물과 함께 바람을 즐기는 펫 파크</p></div>
-      <div class="pt"><img class="zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/img/land_img04.jpg" alt="모션 그로브와 놀이공간"><h3>MOTION GROVE · PLAYGROUND</h3><p>녹음 속 운동공간과 성·정원을 모티브로 한 감성 놀이공간</p></div>
+      <div class="pt"><h3>PREMIUM GATE</h3><p>단지의 세련된 첫인상을 선사하는 품격 높은 문주</p></div>
+      <div class="pt"><h3>SIGNATURE HAVEN SQUARE</h3><p>감각적인 조경과 수경이 어우러진 힐링스퀘어</p></div>
+      <div class="pt"><h3>MOTION GROVE · PLAYGROUND</h3><p>녹음 속 운동공간과 성·정원을 모티브로 한 감성 놀이공간</p></div>
     </div>
   </div>
 </section>
@@ -356,9 +379,7 @@ footer .op b{color:var(--gold2)}
       <div><b>GOLF STUDIO</b><span>날씨 걱정 없는 골프연습장</span></div>
       <div><b>FOREST LIBRARY LAB</b><span>라운지형 작은도서관</span></div>
     </div>
-    <img class="full mt zoom" loading="lazy" src="https://xn--q20b245acmc65au2puno.com/sub/community.jpg" alt="커뮤니티 안내">
-    <p class="note">※ 이미지는 소비자의 이해를 돕기 위한 이미지 컷으로 실제와 다를 수 있습니다.</p>
-  </div>
+      </div>
 </section>
 
 <section id="unit">
@@ -375,6 +396,16 @@ footer .op b{color:var(--gold2)}
   </div>
 </section>
 
+<a class="bn" href="tel:16447392" aria-label="대표문의 1644-7392 전화걸기">
+  <div class="in">
+    <div class="l"><small><b>SWITZEN</b> 향남역 그로브 스위첸</small><em>대/표/문/의</em><strong>1644-7392</strong></div>
+    <div class="r">
+      <div class="hl"><svg viewBox="0 0 48 52" aria-hidden="true"><rect x="7" y="3" width="34" height="34" rx="7" fill="none" stroke="#fff" stroke-width="4"/><rect x="13" y="10" width="22" height="11" rx="2" fill="#fff"/><circle cx="16" cy="29" r="2.6" fill="#fff"/><circle cx="32" cy="29" r="2.6" fill="#fff"/><path d="M14 40 L8 50 M34 40 L40 50" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>
+        <p>계약금 5% · 중도금 무이자<i>!!</i><br>향남역 GTX-C · 전매 6개월</p></div>
+      <div class="pill">방문예약 <b>접수중!</b></div>
+    </div>
+  </div>
+</a>
 <section id="map" class="alt">
   <div class="wrap">
     <div class="eb">MODEL HOUSE</div>
