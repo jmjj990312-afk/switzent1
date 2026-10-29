@@ -52,7 +52,8 @@ nav a:hover{color:var(--gold2)}
 .band .tk{display:inline-block;padding:11px 0;font-weight:600;animation:tick 22s linear infinite}
 .band .tk span{margin:0 26px}
 
-section{padding:56px 0}
+section{padding:56px 0;scroll-margin-top:110px}
+.formbox{scroll-margin-top:120px}
 .alt{background:var(--cream)}
 .dark{background:radial-gradient(ellipse at top,var(--green2),var(--green) 70%);color:#fff}
 .eb{font-size:12px;letter-spacing:.24em;color:var(--gold);font-weight:700;display:flex;align-items:center;gap:10px}
@@ -95,6 +96,19 @@ h2{font-family:var(--serif);letter-spacing:-.01em;font-size:clamp(23px,5.4vw,36p
 .comm div{border:1px solid rgba(217,191,143,.35);padding:14px;min-width:0}
 .comm b{color:var(--gold2);font-size:14px;letter-spacing:.04em;display:block}
 .comm span{font-size:14px;color:#cdd3df}
+
+
+/* 예약 버튼: 헤더에 가리지 않게 예약폼으로 이동하고 성명 칸에 커서 */
+document.querySelectorAll('a[href="#reserve2"],a[href="#reserve1"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var id=a.getAttribute('href').slice(1),sec=document.getElementById(id),form=sec.querySelector('form');
+    var y=form.getBoundingClientRect().top+window.pageYOffset-document.querySelector('header').offsetHeight-12;
+    window.scrollTo({top:y,behavior:'smooth'});
+    var n=form.querySelector('input[type=text]');
+    setTimeout(function(){try{n.focus({preventScroll:true});}catch(err){n.focus();}},600);
+  });
+});
 
 /* 평면 탭 */
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
@@ -226,7 +240,7 @@ footer .op b{color:var(--gold2)}
         <label>방문 희망일<input id="d1" type="date"></label>
         <label>방문 시간<select id="h1"><option value="">선택</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option></select></label>
       </div>
-      <label class="agree"><input id="a1" type="checkbox" checked>개인정보 수집·이용에 동의합니다. (수집항목: 성명, 연락처 / 이용목적: 방문예약 상담 / 보유기간: 상담 종료 후 파기)</label>
+      <label class="agree"><input id="a1" type="checkbox">개인정보 수집·이용에 동의합니다. (수집항목: 성명, 연락처 / 이용목적: 방문예약 상담 / 보유기간: 상담 종료 후 파기)</label>
       <button type="submit" class="sbtn">방문예약 남기기</button>
       <div class="msg" aria-live="polite"></div>
       <div class="or">급하시면 바로 전화주세요 <br><a href="tel:16447392">☎ 1644-7392</a></div>
@@ -387,7 +401,7 @@ footer .op b{color:var(--gold2)}
         <label>방문 희망일<input id="d2" type="date"></label>
         <label>방문 시간<select id="h2"><option value="">선택</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option></select></label>
       </div>
-      <label class="agree"><input id="a2" type="checkbox" checked>개인정보 수집·이용에 동의합니다. (수집항목: 성명, 연락처 / 이용목적: 방문예약 상담 / 보유기간: 상담 종료 후 파기)</label>
+      <label class="agree"><input id="a2" type="checkbox">개인정보 수집·이용에 동의합니다. (수집항목: 성명, 연락처 / 이용목적: 방문예약 상담 / 보유기간: 상담 종료 후 파기)</label>
       <button type="submit" class="sbtn">방문예약 남기기</button>
       <div class="msg" aria-live="polite"></div>
       <div class="or">급하시면 바로 전화주세요 <br><a href="tel:16447392">☎ 1644-7392</a></div>
@@ -456,7 +470,7 @@ document.querySelectorAll('.rform').forEach(function(f){
     if(tel.replace(/[^0-9]/g,'').length<10){m.textContent='연락처를 정확히 입력해 주세요.';document.getElementById('t'+k).focus();return;}
     if(!document.getElementById('a'+k).checked){m.textContent='개인정보 수집·이용에 동의해 주세요.';return;}
     var body='['+SITE+' 방문예약]\n성명: '+name+'\n연락처: '+tel+(date?'\n방문일: '+date:'')+(time?'\n방문시간: '+time:'');
-    var reset=function(){f.reset();document.getElementById('a'+k).checked=true;};
+    var reset=function(){f.reset();};
 
     if(isMobile()){
       /* 휴대폰: 문자앱이 열리며 담당자 휴대폰(8939)으로 바로 전송 */
